@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Personal Portfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d7cbfa1b38.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="header">
+     <div class="container">
+        <nav>
+     <img src="Image/Logo2.png" class="logo">
+     <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class=" fa fa-solid fa-xmark" onclick="closemenu()"></i>
+     </ul>
+     <i class=" fa fa-solid fa-bars" onclick="openmenu()"></i>
+     </nav>
+     <div class="header-text">
+        <p>Full stack developer</p>
+        <h1>Hi, I am <span>Ankit.</span><br/>I am a <span1>MERN</span1> stack developer.</h1>
+     </div>
+     <a href="" class="btn">Hire me</a>
+     </div>
+    </div>
+
+    <!-- --------About------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+         <img src="Image/Hp.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+        
+                <p class="para">I am a dedicated and enthusiastic individual with a background in B.Tech and a strong passion for full-stack development, particularly in the MERN (MongoDB, Express.js, React.js, Node.js) stack. My journey into the world of technology began during my undergraduate studies, where I developed a solid foundation in computer science and engineering principles.</p>
+                <p class="para">Currently, I am eagerly seeking opportunities in full-stack development roles where I can apply my skills and contribute to the creation of innovative and impactful solutions. I am passionate about leveraging technology to solve real-world problems and improve user experiences, and I am excited about the prospect of collaborating with like-minded individuals to bring ideas to life.</p>
+          <br>
+                <img src="Image/MERN.webp" class="mern">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----- Skills Section ----- -->
+<div id="skills">
+    <div class="container">
+      <h1 class="heading">Technical <span class="skill">Skills</span></h1>
+      <br>
+      <div class="row1">
+        <div class="skill-col-1">
+
+       <p> I am a Dynamic and skilled software developer with proficiency in modern web development technologies. Specializing in front-end development, I have hands-on experience with React.js and Next.js, crafting interactive and responsive user interfaces.</p>
+       
+       <p>My proficiency in HTML, CSS, and JavaScript, combined with my experience in the MERN stack, enables me to develop robust, full-stack web applications. Passionate about innovation and efficiency, I am dedicated to delivering high-quality solutions that exceed expectations.</p>
+
+       <br>
+       <p>Additionally, my expertise extends to utilizing Bootstrap and Tailwind CSS to create visually appealing designs with streamlined user experiences. Proficient in version control and collaboration, I actively contribute to projects on GitHub and leverage Netlify for seamless deployment and hosting.</p>
+       
+        </div>
+        <div class="skill-col-2">
+            <img src="Image/Tech stack.png">
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!------ Project section------->
+<div class="#project">
+    <div class="container">
+
+    </div>
+</div>
+
+<!-- Contact---- -->
+<div id="contact">
+    <div class="container">
+    <div class="row">
+        <div class="contact-left">
+        <h1 class-sub-titlle>Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> ankitchauhandhoni@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 012345679</p>
+        <div class="social-icons">
+       <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="fa-brands fa-linkedin"></i></a>
+       <a href=""><i class="fa-brands fa-facebook"></i></a>
+       <a href=""><i class="fa-brands fa-instagram"></i></a>
+       <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+        <br>
+        <a href="Image/Resume.pdf" class="btn">Download CV</a>
+        </div>
+    
+        <div class="contact-right">
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your name" required>
+            <input type="email" name="Email" placeholder="Your e-mail" required>
+            <textarea name="Message" row="5" placeholder="Your message"></textarea>
+            <button class="btn btn-2">Sumbit</button>
+        </form>
+        <span id="msg"></span>
+        </div>
+    </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ankit. <i class="fa-solid fa-heart"></i>. All rights reserved.</p>
+    </div>
+</div>
+<!--  Javascript  -->
+
+<script>
+    var sidemenu=document.getElementById("sidemenu")
+     function openmenu(){
+        sidemenu.style.right="0";
+     }
+     function closemenu(){
+        sidemenu.style.right="-200px";
+     }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz2BmLSMsVE007pOUIYJzsjnbh_9n7xWvbRVCxR9ZjNJUBnx29q36jvaoJxwle3PQKzCw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg");
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML="Message sent successfully";
+            setTimeout(function(){
+                msg.innerHTML=""
+            },1000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
