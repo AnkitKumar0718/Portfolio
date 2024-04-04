@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #080808;
+    color:white;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("Image/background.jpg");
+     background-size: cover;
+     background-position: center;
+}
+
+.container{
+    padding: 10px 10% 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 10px 20px;
+  
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+  width:100%
+}
+
+.header-text{
+    margin-top: 15%;
+    font-size: 30px;
+}
+.header-text h1{
+     font-size: 50px;
+     margin-top: 20px;
+}
+.header-text span{
+    color:#ff004f;
+}
+
+.header-text span1{
+    color:yellow;
+}
+
+/*--------About-------*/
+
+#about{
+    padding: 80px 0;
+    color:#ababab;
+    flex-wrap: wrap;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis:35%
+}
+
+.about-col-1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+ flex-basis:50%;
+}
+
+.sub-title{
+    font-size:60px;
+    font-weight: 500;
+    color:#fff;
+    margin-bottom: 20px;;
+}
+
+.mern{
+    width:280px;
+    height:90px;
+    transition:transform 0.5s;
+}
+.mern:hover{
+    transform:translateY(-10px);
+}
+
+/* Skills section*/
+.heading{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 90px;
+    color:#ff004f;
+}
+.skill{
+    color:yellow;
+}
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-col-1 {
+    flex-basis: 48%; /* Adjust as needed */
+    padding: 40px; /* Optional: Add padding for better readability */
+}
+
+.skill-col-1 p{
+    font-size: 18px;;
+}
+
+.skill-col-2 {
+    flex-basis: 48%; /* Adjust as needed */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    padding: 20px; /* Optional: Add padding for better readability */
+}
+
+.skill-col-2 img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+}
+
+/* Contact section*/
+#contact{
+    margin-top: 80px;
+    margin-bottom: 40px;;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top:30px;
+}
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 35px;
+margin-right: 15px;
+
+color:#ababab;
+display: inline-block;
+transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:green;
+    transform: translateY(-5px);
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff004f;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top:20px;
+}
+
+.btn:hover {
+    background-color: #d1003a; /* Darker shade on hover */
+}
+
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    margin: 15px 0; /* Corrected comma to space for margin */
+    padding: 15px;
+    background: #262626;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+.copyright{
+    width:100%;
+    text-align: center;
+    margin-top: 40px;
+    background:#262626 ;
+    padding:25px 0;
+}
+.copyright i{
+color:#ff004f
+}
+
+#msg{
+    display:inline-block ;
+    margin-top: -20px;
+    color:green;
+    text-align: right;
+}
+nav .fa{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url(Image/Ankity.jpg);
+    }
+    .header-text{
+        font-size: 16px;
+        margin-top: 200px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa{
+        display: block;
+        font-size: 25px;;
+    }
+    nav ul{
+        position: fixed;
+        right: -200px;
+        top: 0;
+        background: #ff004f;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa{
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor:pointer;
+    }
+
+
+    #about{
+        margin-top: -60px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .sub-title {
+        font-size: 40px;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+   .about-col-2 .para{
+    margin-top: -40x;
+     }
+
+    .mern {
+        width: 200px;
+        height: auto;
+    }
+
+    .about-col-1 img{
+        align-items: center;
+        width: 400px;
+        height: 350px;
+        border-radius: 15px;
+    }
+    #skills{
+margin-top: -30px;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .skill-col-1{
+        margin-top: -40px;
+    }
+    .skill-col-2{
+        margin-top: -40px;
+    }
+    .skill-col-2 img{
+       width: 100%;
+    }
+    #contact{
+        margin-top: 0;
+    }
+    #msg{
+        margin-top: -10px;;
+    }
+}
