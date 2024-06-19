@@ -85,9 +85,10 @@ nav ul li a:hover::after{
 /*--------About-------*/
 
 #about{
-    padding: 80px 0;
+    padding: 60px 0;
     color:#ababab;
     flex-wrap: wrap;
+    background-color: #262626;
 }
 
 .row{
@@ -126,6 +127,11 @@ nav ul li a:hover::after{
 }
 
 /* Skills section*/
+#skill{
+padding-bottom: 60px;
+padding-top: 60px;
+}
+
 .heading{
     text-align: center;
     font-size: 50px;
@@ -142,8 +148,8 @@ nav ul li a:hover::after{
 }
 
 .skill-col-1 {
-    flex-basis: 48%; /* Adjust as needed */
-    padding: 40px; /* Optional: Add padding for better readability */
+    flex-basis: 48%; 
+    padding: 40px; 
 }
 
 .skill-col-1 p{
@@ -151,16 +157,76 @@ nav ul li a:hover::after{
 }
 
 .skill-col-2 {
-    flex-basis: 48%; /* Adjust as needed */
+    flex-basis: 48%; 
     display: flex;
-    justify-content: flex-end; /* Align image to the right */
-    padding: 20px; /* Optional: Add padding for better readability */
+    justify-content: flex-end; 
+    padding: 20px; 
 }
 
 .skill-col-2 img {
-    max-width: 100%; /* Ensure image does not exceed container width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
     border-radius: 15px;
+}
+
+/*Project section*/
+#project {
+    padding-top: 20px;
+    background-color: #262626;
+    padding-bottom: 60px;
+
+}
+
+.head1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700; 
+}
+
+.hp {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    margin-right: 28px;
+    background-color:#262626;
+    text-align: center;
+}
+
+.project-i {
+    width: 300px;
+    height: 270px;
+    border-radius: 12px;
+    transition:transform 0.5s;
+}
+.project-i:hover {
+    width: 310px;
+    transform:translateY(-10px);
+    
+}
+
+.ps1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.btn4 {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:#ff004f;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top:4px;
+    align-items: center;
+    margin-left: 120px;  
+}
+
+.btn4:hover{
+    background-color: green;
 }
 
 /* Contact section*/
@@ -214,7 +280,7 @@ transition: transform 0.5s;
 }
 
 .btn:hover {
-    background-color: #d1003a; /* Darker shade on hover */
+    background-color: #d1003a; 
 }
 
 
@@ -227,13 +293,13 @@ form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    margin: 15px 0; /* Corrected comma to space for margin */
+    margin: 15px 0; 
     padding: 15px;
     background: #262626;
     color: #fff;
     border-radius: 6px;
     font-size: 18px;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box; 
 }
 .copyright{
     width:100%;
@@ -256,16 +322,28 @@ nav .fa{
     display: none;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:500px){
+
     #header{
-        background-image: url(Image/Ankity.jpg);
+        background-image: url(Image/c22.png);
+        
+       padding-bottom: 40px;
     }
+
+    #header.btn{
+        margin-top: 40px;
+    }
+    
     .header-text{
         font-size: 16px;
-        margin-top: 200px;
+        margin-top: 160px;
     }
+    
     .header-text h1{
         font-size: 30px;
+    }
+    .header-text span{
+        color:white;
     }
     nav .fa{
         display: block;
@@ -293,7 +371,8 @@ nav .fa{
 
 
     #about{
-        margin-top: -60px;
+       padding-top: 20px; 
+       padding-bottom: 20px;
     }
 
     .row {
@@ -303,8 +382,9 @@ nav .fa{
     .about-col-1,
     .about-col-2 {
         flex-basis: 100%;
+        width: 100%;
     }
-
+    
     .sub-title {
         font-size: 40px;
         text-align: left;
@@ -322,13 +402,15 @@ nav .fa{
 
     .about-col-1 img{
         align-items: center;
-        width: 400px;
-        height: 350px;
+        width: 270px;
+        height: 320px;
         border-radius: 15px;
     }
+
     #skills{
-margin-top: -30px;
+margin-top: -10px;
     }
+
     .row1{
         flex-direction: column;
     }
@@ -341,6 +423,30 @@ margin-top: -30px;
     .skill-col-2 img{
        width: 100%;
     }
+    .skill-col-1 .para2{
+        width: 120%;
+        align-items: center;
+        text-align:left;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    #project{
+        padding-bottom: 30px;;
+    }
+
+    .ps1 {
+        display: flex;
+        flex-direction: column; 
+        margin-top: 40px;
+        align-items: center; 
+    }
+
+    
+    .ps1 a {
+        margin-bottom: 20px; 
+    }
+
     #contact{
         margin-top: 0;
     }
